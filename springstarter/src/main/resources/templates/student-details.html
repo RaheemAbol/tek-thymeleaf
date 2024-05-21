@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+</head>
+<body>
+<h2>Student Details</h2>
+<p>ID: <span th:text="${student.id}"></span></p>
+<p>Name: <span th:text="${student.name}"></span></p>
+<p>Gender:
+    <span th:if="${student.gender} == 'M'" th:text="'Male'"></span>
+    <span th:unless="${student.gender} == 'M'" th:text="'Female'"></span>
+</p>
+</body>
+</html>

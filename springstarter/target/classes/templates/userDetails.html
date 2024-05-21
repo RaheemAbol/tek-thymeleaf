@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Details</title>
+</head>
+<body>
+<div class="container">
+    <h2>User Details</h2>
+    <p>Name: <span th:text="${baseUser.name}"></span></p>
+    <p>Email: <span th:text="${baseUser.email}"></span></p>
+    <p>Phone Number: <span th:text="${baseUser.tel}"></span></p>
+    <p>Refer: <span th:text="${baseUser.refer}"></span></p>
+    <p>Preferred Contact Method: <span th:text="${baseUser.contact}"></span></p>
+    <p>Agreed to Terms: <span th:text="${baseUser.terms ? 'Yes' : 'No'}"></span></p>
+    <a th:href="@{/allUsers}">View All Users</a>
+</div>
+</body>
+</html>
